@@ -11,7 +11,7 @@
  */
 
 .card-container {
-  /* Your container query setup goes here */
+  container: card / inline-size;
 
   .card {
     background-color: var(--bg-clr);
@@ -22,11 +22,22 @@
     flex-direction: column;
     gap: var(--spacing-sm);
 
+    @container card (min-width: 400px) {
+      flex-direction: row;
+    }
+
     .card-image {
       width: 100%;
       height: auto;
       border-radius: var(--radius-sm);
       object-fit: cover;
+
+      @container card (min-width: 400px) {
+        width: 200px;
+        height: unset;
+        margin-block: auto;
+        flex-shrink: 0;
+      }
     }
 
     .card-title {
@@ -42,13 +53,6 @@
     }
   }
 }
-
-/* TODO: Add container query for cards at 400px width
- * When the container is at least 400px wide:
- * 1. Change .card to use flex-direction: row
- * 2. Set .card-image to a fixed width (like 200px)
- * 3. Add flex-shrink: 0 to the image so it doesn't shrink
- */
 
 /* TODO: Add @supports check for container queries
  * Wrap your container query in: @supports (container-type: inline-size) { }
