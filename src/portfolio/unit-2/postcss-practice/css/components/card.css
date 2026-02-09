@@ -22,8 +22,19 @@
     flex-direction: column;
     gap: var(--spacing-sm);
 
-    @container card (min-width: 400px) {
-      flex-direction: row;
+    @supports (container-type: inline-size) {
+      @container card (min-width: 400px) {
+        flex-direction: row;
+      }
+    }
+
+    &:hover {
+      background-color: #eee;
+      @supports (
+        background-color: color-mix(in oklab, var(--bg-clr) 90%, black 10%)
+      ) {
+        background-color: color-mix(in oklab, var(--bg-clr) 90%, black 10%);
+      }
     }
 
     .card-image {
@@ -31,12 +42,18 @@
       height: auto;
       border-radius: var(--radius-sm);
       object-fit: cover;
+      @supports (corner-shape: squircle) {
+        border-radius: var(--radius-lg);
+        corner-shape: squircle;
+      }
 
-      @container card (min-width: 400px) {
-        width: 200px;
-        height: unset;
-        margin-block: auto;
-        flex-shrink: 0;
+      @supports (container-type: inline-size) {
+        @container card (min-width: 400px) {
+          width: 200px;
+          height: unset;
+          margin-block: auto;
+          flex-shrink: 0;
+        }
       }
     }
 
