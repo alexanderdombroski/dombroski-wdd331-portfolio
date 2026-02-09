@@ -4,12 +4,6 @@
  * Uses @supports for progressive enhancement with fallbacks.
  */
 
-/* TODO: Set up the card container for container queries
- * 1. Add container-type: inline-size
- * 2. Add container-name: card
- * Hint: You learned about this in the Container Queries lesson
- */
-
 .card-container {
   container: card / inline-size;
 
@@ -70,28 +64,3 @@
     }
   }
 }
-
-/* TODO: Add @supports check for container queries
- * Wrap your container query in: @supports (container-type: inline-size) { }
- * This ensures browsers without container query support use the base styles
- * as a fallback.
- */
-
-/* TODO: Add modern CSS feature with @supports fallback
- * Choose ONE of these modern features to implement with a fallback:
- * 
- * Option 1: CSS Nesting
- * - Use native CSS nesting for hover states inside .card
- * - Wrap in: @supports (selector(&)) { }
- * - Provide separate hover rules as fallback
- * 
- * Option 2: color-mix()
- * - Use color-mix() to create hover background color
- * - Wrap in: @supports (background: color-mix(in oklch, red, blue)) { }
- * - Provide static color as fallback
- * 
- * Option 3: Subgrid (if using a card grid)
- * - Use subgrid to align card content across cards
- * - Wrap in: @supports (grid-template-columns: subgrid) { }
- * - Provide standard grid as fallback
- */
