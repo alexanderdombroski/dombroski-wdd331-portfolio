@@ -1,12 +1,5 @@
 /**
  * Product Page Layout
- * TODO: Implement a product detail page with gallery, info panel, specs, and reviews
- * 
- * Requirements:
- * - Gallery and info panel should be side-by-side on wide screens, stacked on narrow
- * - Thumbnail strip should use Flexbox with gap
- * - Specifications should create responsive columns using flex-basis
- * - Reviews should use the media object pattern
  */
 
 .product-container {
@@ -15,21 +8,18 @@
   padding: var(--spacing-xl);
 }
 
-/* TODO: Style the product top section (gallery + info)
- * Hint: Use Flexbox with flex-wrap: wrap
- * Set appropriate flex-basis values for responsive behavior
- * Gallery should be larger than info panel
- */
 .product-top {
-  /* Your code here */
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  justify-content: center;
 }
 
-/* TODO: Style the image gallery
- * Hint: Should be a flex item with flex-basis around 60%
- * Contains main image and thumbnail strip
- */
 .product-gallery {
-  /* Your code here */
+  max-width: calc(100% - (var(--spacing-lg) * 2));
+  @media (min-width: 40rem) {
+    flex-basis: 60%;
+  }
 }
 
 .product-main-image {
@@ -39,16 +29,15 @@
   border: 1px solid var(--color-border);
 }
 
-/* TODO: Style the thumbnail strip
- * Hint: Use Flexbox with gap for spacing
- * Each thumbnail should have a fixed flex-basis but can shrink
- */
 .product-thumbnails {
-  /* Your code here */
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
 }
 
 .product-thumbnail {
-  /* Your code here - what flex properties create fixed-width thumbnails that can shrink? */
+  flex: 0 1 150px;
   border-radius: var(--radius-sm);
   border: 2px solid transparent;
   cursor: pointer;
@@ -60,13 +49,13 @@
   border-color: var(--color-primary);
 }
 
-/* TODO: Style the product info panel
- * Hint: Should be a flex item with flex-basis around 35%
- * Use flex-direction: column to stack content
- * Use gap for consistent spacing between sections
- */
 .product-info {
-  /* Your code here */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  @media (min-width: 40rem) {
+    flex-basis: 35%;
+  }
 }
 
 .product-title {
@@ -86,13 +75,16 @@
 }
 
 .product-actions {
-  /* Your code here - use Flexbox to arrange buttons */
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+
+  & > * {
+    flex-shrink: 0;
+  }
 }
 
-/* TODO: Style the specifications section
- * Hint: Use Flexbox with flex-wrap to create responsive columns
- * Each spec item should have flex: 1 1 200px for automatic wrapping
- */
 .product-specs {
   margin-top: var(--spacing-xxl);
   padding-top: var(--spacing-xl);
@@ -100,12 +92,13 @@
 }
 
 .specs-list {
-  /* Your code here */
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
 .spec-item {
-  /* Your code here */
+  flex: 1 1 200px;
   padding: var(--spacing-med);
   background-color: var(--color-surface);
   border-radius: var(--radius-sm);
@@ -123,11 +116,6 @@
   color: var(--color-text);
 }
 
-/* TODO: Style the reviews section with media object pattern
- * Hint: Each review should be a Flexbox container
- * Avatar on left with fixed width, content on right grows to fill space
- * Content area needs min-width: 0 to allow text wrapping
- */
 .product-reviews {
   margin-top: var(--spacing-xxl);
   padding-top: var(--spacing-xl);
@@ -135,7 +123,7 @@
 }
 
 .review {
-  /* Your code here - implement media object pattern */
+  display: flex;
   padding: var(--spacing-lg);
   border-bottom: 1px solid var(--color-border);
 }
@@ -145,7 +133,9 @@
 }
 
 .review-avatar {
-  /* Your code here - fixed width, no shrinking */
+  flex-shrink: 0;
+  margin-right: var(--spacing-med);
+  align-self: center;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -153,7 +143,8 @@
 }
 
 .review-content {
-  /* Your code here - grows to fill space, remember min-width: 0 */
+  flex-grow: 1;
+  min-width: 0;
 }
 
 .review-author {
