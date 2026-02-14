@@ -1,53 +1,15 @@
 /**
  * Portfolio Layout
- * 
- * TODO: Implement the following layout requirements:
- * 
- * 1. STICKY FOOTER PATTERN (Flexbox)
- *    - Make body a flex container with column direction
- *    - Set min-height to 100vh
- *    - Make main content area grow to push footer down
- * 
- * 2. HEADER LAYOUT (Grid Template Areas)
- *    - Use grid-template-areas for header structure
- *    - Create areas: logo, navigation
- *    - Make it responsive (stack on mobile)
- * 
- * 3. NAVIGATION (Flexbox)
- *    - Use flexbox for nav links
- *    - Space items appropriately
- *    - Align items vertically
- * 
- * 4. HERO SECTION (Grid)
- *    - Use grid for hero content positioning
- *    - Center content vertically and horizontally
- * 
- * 5. STATS GRID (Auto-Fit)
- *    - Use repeat(auto-fit, minmax(..., 1fr))
- *    - Make cards responsive without media queries
- *    - Ensure minimum width works on mobile
- * 
- * 6. PHOTO GALLERY (Auto-Fill vs Auto-Fit)
- *    - Experiment with both auto-fill and auto-fit
- *    - Decide which works better for this layout
- *    - Use minmax() for responsive columns
- * 
- * 7. ABOUT SECTION (Grid + Flexbox)
- *    - Grid for image/text layout
- *    - Flexbox for internal content arrangement
- * 
- * 8. FOOTER (Flexbox)
- *    - Use flexbox for footer content
- *    - Distribute space between elements
  */
 
 /* ===========================================
    STICKY FOOTER SETUP
    =========================================== */
-/* 
-   TODO: Implement sticky footer pattern
-   Hint: body needs to be a flex container
-*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 /* ===========================================
    HEADER
@@ -63,8 +25,9 @@
   margin: 0 auto;
   padding: 0 var(--spacing-lg);
 
-  /* TODO: Use grid-template-areas here */
-  /* Define areas for logo and nav */
+  display: grid;
+  grid-template-areas: "logo nav";
+  grid-template-columns: 1fr 1fr;
 }
 
 .site-logo {
@@ -73,15 +36,31 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
 
-  /* TODO: Assign to grid area */
+  grid-area: logo;
+  align-self: center;
+  @media (min-width: 20rem) {
+    white-space: nowrap;
+  }
 }
 
 .site-nav {
-  /* TODO: Assign to grid area */
+  grid-area: nav;
 }
 
 .site-nav ul {
-  /* TODO: Use flexbox for navigation links */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: right;
+  gap: 1rem;
+  @media (min-width: 40rem) {
+    flex-direction: row;
+  }
+}
+
+.site-nav li {
+  margin-block: auto;
 }
 
 .site-nav a {
@@ -98,7 +77,7 @@
    MAIN CONTENT
    =========================================== */
 .main-content {
-  /* TODO: Make this grow to push footer down */
+  flex-grow: 1;
 }
 
 /* ===========================================
@@ -114,7 +93,8 @@
   padding: var(--spacing-xxxl) var(--spacing-lg);
   min-height: 500px;
 
-  /* TODO: Use grid to center content */
+  display: grid;
+  place-items: center;
 }
 
 .hero-content {
@@ -131,7 +111,12 @@
 .hero p {
   font-size: var(--font-size-lg);
   margin-bottom: var(--spacing-xl);
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255 255 255 / 0.9);
+}
+
+.hero a {
+  color: white;
+  border-color: white;
 }
 
 /* ===========================================
@@ -148,9 +133,8 @@
 }
 
 .stats-grid {
-  /* TODO: Use auto-fit with minmax */
-  /* Make cards responsive - 3 columns on desktop, fewer on smaller screens */
-  /* Hint: minmax(min(250px, 100%), 1fr) prevents overflow on mobile */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 }
 
 /* ===========================================
@@ -172,10 +156,9 @@
 }
 
 .photo-grid {
-  /* TODO: Implement responsive photo grid */
-  /* Experiment: Try auto-fill first, then auto-fit */
-  /* Which one looks better for a photo gallery? */
-  /* Consider: Do you want photos to expand or stay consistent width? */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+  gap: 1rem;
 }
 
 /* ===========================================
@@ -189,14 +172,15 @@
 .about-container {
   max-width: var(--content-max-width);
   margin: 0 auto;
-
-  /* TODO: Use grid for image and text layout */
-  /* Desktop: image on left, text on right */
-  /* Mobile: stack vertically */
+  @media (min-width: 60rem) {
+    display: grid;
+    grid-template-areas: "img text";
+    gap: 1rem;
+  }
 }
 
 .about-image {
-  /* TODO: Assign to grid area or position */
+  grid-area: img;
 }
 
 .about-image img {
@@ -207,8 +191,11 @@
 }
 
 .about-content {
-  /* TODO: Assign to grid area or position */
-  /* Use flexbox internally for vertical spacing */
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
 
 /* ===========================================
@@ -218,16 +205,15 @@
   background: var(--color-text);
   color: white;
   padding: var(--spacing-xl) var(--spacing-lg);
-
-  /* TODO: Don't let footer grow (sticky footer requirement) */
+  flex-shrink: 0;
 }
 
 .footer-container {
   max-width: var(--content-max-width);
   margin: 0 auto;
 
-  /* TODO: Use flexbox for footer layout */
-  /* Space between copyright and social links */
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-copyright {
@@ -235,7 +221,10 @@
 }
 
 .footer-social {
-  /* TODO: Use flexbox for social links */
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: right;
 }
 
 .footer-social a {
@@ -247,14 +236,3 @@
 .footer-social a:hover {
   color: white;
 }
-
-/* ===========================================
-   RESPONSIVE DESIGN
-   =========================================== */
-/* 
-   TODO: Add media queries where needed
-   The auto-fit/auto-fill grids handle most responsive behavior,
-   but you may need breakpoints for:
-   - Header layout (stack logo/nav on mobile)
-   - About section (stack image/text on mobile)
-*/
