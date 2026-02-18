@@ -1,14 +1,5 @@
 /**
  * Dashboard Layout
- * 
- * TODO: Implement a dashboard using:
- * 1. Auto-Fit - Make cards responsive without media queries
- * 2. Strategic Grid Usage - Decide where Grid is appropriate
- * 
- * Key Requirements:
- * - Use repeat(auto-fit, minmax(...)) for responsive card grids
- * - Ensure cards work on all screen sizes (mobile-friendly minmax)
- * - Consider: Does this layout need subgrid? Why or why not?
  */
 
 /* ===========================================
@@ -56,20 +47,9 @@ body {
 }
 
 .stats-grid {
-  /*
-       TODO: Implement responsive stats grid using auto-fit
-       
-       Requirements:
-       - Use repeat(auto-fit, minmax(..., 1fr))
-       - Set minimum width to ~250px
-       - Make mobile-friendly: minmax(min(250px, 100%), 1fr)
-       - Add appropriate gap
-       
-       Why auto-fit here?
-       - Cards should expand to fill available space
-       - No empty tracks on wide screens
-       - Automatic wrapping as screen narrows
-    */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--spacing-med);
 }
 
 .stat-card {
@@ -110,24 +90,9 @@ body {
 }
 
 .activity-grid {
-  /*
-       TODO: Implement activity cards grid
-       
-       Similar to stats grid but with different sizing:
-       - Use repeat(auto-fit, minmax(..., 1fr))
-       - Larger minimum width ~350px (more content per card)
-       - Mobile-friendly: minmax(min(350px, 100%), 1fr)
-       
-       IMPORTANT DECISION:
-       Does this layout need subgrid?
-       
-       Consider:
-       - Do card contents need to align across cards?
-       - Is the content structure identical in each card?
-       - Would alignment improve the visual design?
-       
-       Answer in your assignment reflection!
-    */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+  gap: var(--spacing-med);
 }
 
 .activity-card {
@@ -135,6 +100,8 @@ body {
   border-radius: var(--radius-med);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .activity-card-image {
@@ -145,6 +112,9 @@ body {
 
 .activity-card-content {
   padding: var(--spacing-lg);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .activity-card-title {
@@ -161,27 +131,9 @@ body {
 }
 
 .activity-card-meta {
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
 }
-
-/* ===========================================
-   REFLECTION QUESTIONS
-   =========================================== */
-/*
-   THINK ABOUT:
-   
-   1. Why did you choose auto-fit over auto-fill for these grids?
-      - What happens with auto-fill when there are few cards?
-      - What happens with auto-fit?
-   
-   2. Does this dashboard layout benefit from subgrid?
-      - Are you trying to align content ACROSS cards?
-      - Or is each card independent?
-   
-   3. Could you achieve the same layout with Flexbox?
-      - What would be harder with Flexbox?
-      - When is Grid the better choice?
-*/
