@@ -24,6 +24,7 @@
     "prettier": "^3.8.1"
   },
   "workspaces": [
-    "src/portfolio/unit-2/postcss-practice"
+    "src/portfolio/unit-2/postcss-practice",
+    "src/portfolio/unit-4/gospel-project"
   ]
 }

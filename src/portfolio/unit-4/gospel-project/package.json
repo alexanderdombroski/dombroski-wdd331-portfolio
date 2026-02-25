@@ -1,0 +1,14 @@
+{
+  "name": "gospel-project",
+  "version": "1.0.0",
+  "description": "Choose either Bootstrap or Tailwind and build a gospel-themed page (New Testament or Book of Mormon) in your portfolio.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Dombroski",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "tailwindcss": "^4.2.1"
+  }
+}
