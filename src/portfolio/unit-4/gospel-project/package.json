@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "Choose either Bootstrap or Tailwind and build a gospel-themed page (New Testament or Book of Mormon) in your portfolio.",
   "scripts": {
+    "watch": "tailwindcss -i styles/styles.css -o styles/styles.min.css --watch",
+    "build": "tailwindcss -i styles/styles.css -o styles/styles.min.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Dombroski",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "autoprefixer": "^10.4.27",
     "tailwindcss": "^4.2.1"
   }
 }
