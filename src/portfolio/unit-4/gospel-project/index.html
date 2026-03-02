@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parable of the Slope</title>
     <link rel="stylesheet" href="./styles/styles.min.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./scripts/main.js" defer></script>
   </head>
-  <body class="font-sans">
-    <header>
+  <body class="font-sans flex flex-col items-center min-h-screen">
+    <header class="bg-amber-500 h-20 w-full">
       <nav></nav>
     </header>
     <main>
@@ -29,8 +31,27 @@
         >
         made using parts of his talk.
       </p>
+      <section class="graph-section">
+        <svg
+          width="700"
+          height="400"
+          class="graph cursor-pointer border-black border-solid border-2 mx-auto"
+        ></svg>
+        <div class="controls flex flex-row justify-between w-2xl mx-auto my-1">
+          <p class="content-center">Slope: <span id="slope">0</span></p>
+          <button
+            class="reset-btn border-red-500 hover:border-red-700 border-solid border-2 px-4 py-2 rounded-lg"
+          >
+            Reset Graph
+          </button>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="bg-amber-500 h-20 w-full mt-auto content-center">
+      <p class="text-center text-white text-lg">
+        Thanks for visiting the page!
+      </p>
+    </footer>
   </body>
 </html>
 
