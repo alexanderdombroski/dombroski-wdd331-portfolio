@@ -2,10 +2,10 @@ const WIDTH = 700;
 const HEIGHT = 400;
 const MARGIN = 10;
 
-let data = [{ x: 0, y: 0 }];
+const data = [];
 
 document.querySelector(".reset-btn").addEventListener("click", () => {
-  data = [{ x: 0, y: 0 }];
+  data.length = 0;
   render();
 });
 

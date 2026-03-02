@@ -9,34 +9,52 @@
     <script src="./scripts/main.js" defer></script>
   </head>
   <body class="font-sans flex flex-col items-center min-h-screen">
-    <header class="bg-amber-500 h-20 w-full">
-      <nav></nav>
+    <header class="bg-amber-500 h-20 w-full content-center">
+      <h1 class="text-white text-center text-2xl">Parable of the Slope</h1>
     </header>
     <main>
-      <p>
-        Elder Clark G. Gilbert, the newest of the twelve apostles filled the
-        vacancy of President Jeffery R. Holland on Feburary 12, 2026. At this
-        point of time, he had only given one conference talk:
-        <a
-          href="https://www.churchofjesuschrist.org/study/general-conference/2021/10/16gilbert?lang=eng"
-          target="_blank"
-          rel="noopener noreferrer"
-          >"Becoming More in Christ: The Parable of the Slope"</a
-        >. There is also an
-        <a
-          href="https://www.churchofjesuschrist.org/study/video/inspirational-messages/2023-01-0040-the-parable-of-the-slope-elder-clark-g-gilbert-eng?lang=eng"
-          target="_blank"
-          rel="noopener noreferrer"
-          >inspiration message video</a
+      <section class="intro">
+        <p>
+          Elder Clark G. Gilbert, the newest of the twelve apostles filled the
+          vacancy of President Jeffery R. Holland on Feburary 12, 2026. At this
+          point of time, he had only given one conference talk:
+          <a
+            href="https://www.churchofjesuschrist.org/study/general-conference/2021/10/16gilbert?lang=eng"
+            target="_blank"
+            rel="noopener noreferrer"
+            >"Becoming More in Christ: The Parable of the Slope"</a
+          >. There is also an
+          <a
+            href="https://www.churchofjesuschrist.org/study/video/inspirational-messages/2023-01-0040-the-parable-of-the-slope-elder-clark-g-gilbert-eng?lang=eng"
+            target="_blank"
+            rel="noopener noreferrer"
+            >inspiration message videok</a
+          >
+          made using parts of his talk.
+        </p>
+        <blockquote
+          cite="https://www.churchofjesuschrist.org/study/general-conference/2021/10/16gilbert?lang=eng"
         >
-        made using parts of his talk.
-      </p>
+          We all have different intercepts in life—we start in different places
+          with different life endowments. Some are born with high intercepts,
+          full of opportunity. Others face beginning circumstances that are
+          challenging and seem unfair. We then progress along a slope of
+          personal progress. Our future will be determined far less by our
+          starting point and much more by our slope.
+          <footer>
+            <cite>- Elder Clark G. Gilbert</cite>
+          </footer>
+        </blockquote>
+        <p>You can add dots on the graph below to create a slope</p>
+      </section>
       <section class="graph-section">
         <svg
           width="700"
           height="400"
-          class="graph cursor-pointer border-black border-solid border-2 mx-auto"
-        ></svg>
+          class="graph cursor-pointer border-black border-solid border-2 mx-auto bg-amber-50"
+        >
+          <!-- Graph updated dynamically via JS -->
+        </svg>
         <div class="controls flex flex-row justify-between w-2xl mx-auto my-1">
           <p class="content-center">Slope: <span id="slope">0</span></p>
           <button
@@ -45,6 +63,19 @@
             Reset Graph
           </button>
         </div>
+      </section>
+      <section>
+        <p>What is your slope looking like right now?</p>
+        <blockquote
+          cite="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p26#p26"
+        >
+          And now behold, I say unto you, my brethren, if ye have experienced a
+          change of heart, and if ye have felt to sing the song of redeeming
+          love, I would ask, can ye feel so now?
+          <footer>
+            <cite>- Alma 5:26</cite>
+          </footer>
+        </blockquote>
       </section>
     </main>
     <footer class="bg-amber-500 h-20 w-full mt-auto content-center">
