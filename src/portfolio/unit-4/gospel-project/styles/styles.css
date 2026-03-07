@@ -26,6 +26,26 @@ a {
   @apply text-green-700 hover:underline;
 }
 
+p {
+  @apply my-4;
+}
+
+blockquote {
+  @apply bg-amber-50 pb-3;
+
+  & > p {
+    @apply py-4 px-12 relative my-0;
+    &::before,
+    &::after {
+      @apply absolute content-[''] bg-no-repeat bg-contain w-6 h-6;
+    }
+    @apply before:top-2 before:left-4 before:bg-[url('../images/quote-open.svg')];
+    @apply after:bottom-2 after:right-4 after:bg-[url('../images/quote-close.svg')];
+  }
+  footer {
+    @apply text-center;
+  }
+}
 .axis-line {
   @apply stroke-gray-300 stroke-1;
   stroke-dasharray: 4 4;

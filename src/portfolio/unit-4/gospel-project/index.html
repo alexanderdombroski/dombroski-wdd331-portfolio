@@ -12,9 +12,9 @@
     <header class="bg-amber-500 h-20 w-full content-center">
       <h1 class="text-white text-center text-2xl">Parable of the Slope</h1>
     </header>
-    <main>
+    <main class="px-6">
       <section class="intro">
-        <p>
+        <p class="mx-4">
           Elder Clark G. Gilbert, the newest of the twelve apostles filled the
           vacancy of President Jeffery R. Holland on Feburary 12, 2026. At this
           point of time, he had only given one conference talk:
@@ -35,27 +35,33 @@
         <blockquote
           cite="https://www.churchofjesuschrist.org/study/general-conference/2021/10/16gilbert?lang=eng"
         >
-          We all have different intercepts in life—we start in different places
-          with different life endowments. Some are born with high intercepts,
-          full of opportunity. Others face beginning circumstances that are
-          challenging and seem unfair. We then progress along a slope of
-          personal progress. Our future will be determined far less by our
-          starting point and much more by our slope.
+          <p>
+            We all have different intercepts in life—we start in different
+            places with different life endowments. Some are born with high
+            intercepts, full of opportunity. Others face beginning circumstances
+            that are challenging and seem unfair. We then progress along a slope
+            of personal progress. Our future will be determined far less by our
+            starting point and much more by our slope.
+          </p>
           <footer>
             <cite>- Elder Clark G. Gilbert</cite>
           </footer>
         </blockquote>
-        <p>You can add dots on the graph below to create a slope</p>
+        <p class="text-center">
+          You can add dots on the graph below to create a slope
+        </p>
       </section>
-      <section class="graph-section">
-        <svg
-          width="700"
-          height="400"
-          class="graph cursor-pointer border-black border-solid border-2 mx-auto bg-amber-50"
+      <section class="graph-section w-[min(100vw,700px)] mx-auto">
+        <div class="overflow-x-scroll mx-auto">
+          <svg
+            class="graph w-175 h-100 cursor-pointer border-black border-solid border-2 mx-auto bg-amber-50"
+          >
+            <!-- Graph updated dynamically via JS -->
+          </svg>
+        </div>
+        <div
+          class="controls flex flex-row justify-between max-w-2xl w-[min(95vw,700px)] mx-auto my-1"
         >
-          <!-- Graph updated dynamically via JS -->
-        </svg>
-        <div class="controls flex flex-row justify-between w-2xl mx-auto my-1">
           <p class="content-center">Slope: <span id="slope">0</span></p>
           <button
             class="reset-btn border-red-500 hover:border-red-700 border-solid border-2 px-4 py-2 rounded-lg"
@@ -71,9 +77,11 @@
         <blockquote
           cite="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p26#p26"
         >
-          And now behold, I say unto you, my brethren, if ye have experienced a
-          change of heart, and if ye have felt to sing the song of redeeming
-          love, I would ask, can ye feel so now?
+          <p>
+            And now behold, I say unto you, my brethren, if ye have experienced
+            a change of heart, and if ye have felt to sing the song of redeeming
+            love, I would ask, can ye feel so now?
+          </p>
           <footer>
             <cite>- Alma 5:26</cite>
           </footer>
@@ -82,17 +90,22 @@
           What can you do today to refocus on Christ and His teachings?
         </p>
       </section>
-      <section>
+      <section class="mb-10">
         <h2 class="text-center font-bold">Elder Gilbert's Advice</h2>
         <blockquote>
-          For those facing difficult starting circumstances. First, focus on
-          where you are headed and not where you began. ... for those with
-          elevated starting points. First, can we show some humility for
-          circumstances we may not have created ourselves? ... Second, focusing
-          on a high starting point can often trap us into feeling that we are
-          thriving when in fact our inner slope may be quite stagnant. ... Even
-          when things appear to be going well, we must seek out opportunities to
-          improve through prayerful petition.
+          <p>
+            For those facing difficult starting circumstances. First, focus on
+            where you are headed and not where you began. ... for those with
+            elevated starting points. First, can we show some humility for
+            circumstances we may not have created ourselves? ... Second,
+            focusing on a high starting point can often trap us into feeling
+            that we are thriving when in fact our inner slope may be quite
+            stagnant. ... Even when things appear to be going well, we must seek
+            out opportunities to improve through prayerful petition.
+          </p>
+          <footer>
+            <cite>- Elder Clark G. Gilbert</cite>
+          </footer>
         </blockquote>
       </section>
     </main>
