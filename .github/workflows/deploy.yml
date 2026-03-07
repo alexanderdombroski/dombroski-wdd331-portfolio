@@ -33,6 +33,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build --workspace="src/portfolio/unit-4/gospel-project"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
