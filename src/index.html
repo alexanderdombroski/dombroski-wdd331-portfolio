@@ -4,15 +4,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="orb"></div>
+    <div class="orb"></div>
+
     <header>
-      <nav></nav>
+      <h1>Advanced CSS Portfolio Hub</h1>
+      <p class="subtitle">Explore all projects</p>
     </header>
-    <main>
-      <h1>Alex Dombroski</h1>
-      <p>Welcome to my portfolio (in progress)</p>
+    <main class="grid">
+      <a class="card" href="./portfolio/unit-0/sass-less/index.html">
+        <h2>Convert Sass and Less to Native Nested CSS</h2>
+        <span>Unit 0</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-0/custom-properties/index.html">
+        <h2>Custom Properties and Math Functions</h2>
+        <span>Unit 0</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-1/css-refactoring/index.html">
+        <h2>Refactoring CSS using modern selectors and nesting</h2>
+        <span>Unit 1</span>
+      </a>
+
+      <a
+        class="card"
+        href="./portfolio/unit-1/typography-implementation/index.html"
+      >
+        <h2>Dynamic styleset for custom font faces</h2>
+        <span>Unit 1</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-2/theming-system/index.html">
+        <h2>Theme system with CUBE CSS</h2>
+        <span>Unit 2</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-2/postcss-practice/index.html">
+        <h2>PostCSS Practice</h2>
+        <span>Unit 2</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-2/advanced-flexbox/index.html">
+        <h2>Advanced Flexbox Layouts</h2>
+        <span>Unit 2</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-3/flexbox-grid/index.html">
+        <h2>Flexbox + Grid Layouts</h2>
+        <span>Unit 3</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-3/complex-grid/index.html">
+        <h2>Complex Grid Layouts</h2>
+        <span>Unit 3</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-3/container-queries/index.html">
+        <h2>Container Queries</h2>
+        <span>Unit 3</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-4/gospel-project/index.html">
+        <h2>Gospel Project (Tailwind)</h2>
+        <span>Unit 4</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-4/visual-effects/index.html">
+        <h2>Gospel Project 2 (Visual Effects)</h2>
+        <span>Unit 4</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-5/animated-navigation/index.html">
+        <h2>Animated Navigation</h2>
+        <span>Unit 5</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-5/advanced-animation/index.html">
+        <h2>Advanced Animation</h2>
+        <span>Unit 5</span>
+      </a>
+
+      <a class="card" href="./portfolio/unit-6/style-stage/index.html">
+        <h2>Style Stage - Final Project</h2>
+        <span>Unit 6</span>
+      </a>
     </main>
-    <footer></footer>
+    <footer>Built with modern CSS</footer>
+    <script>
+      // interactive glow follow effect
+      document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty("--x", x + "px");
+          card.style.setProperty("--y", y + "px");
+        });
+      });
+    </script>
   </body>
 </html>
