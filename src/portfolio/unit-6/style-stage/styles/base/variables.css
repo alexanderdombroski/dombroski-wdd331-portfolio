@@ -27,4 +27,19 @@
   --spacing-xl: clamp(3rem, 2.6591rem + 1.7045vw, 3.75rem);
   --spacing-2xl: clamp(4rem, 3.5455rem + 2.2727vw, 5rem);
   --spacing-3xl: clamp(6rem, 5.3182rem + 3.4091vw, 7.5rem);
+
+  /* Colors */
+  color-scheme: light dark;
+  --primary-color: oklch(0.65 0.19 50);
+  --primary-color-2: oklch(0.6 0.18 50);
+  --primary-color-3: oklch(0.55 0.17 50);
+  --primary-color-4: oklch(0.5 0.16 50);
+  --primary-color-5: oklch(0.45 0.15 50);
+
+  --surface-color: light-dark(oklch(1 0 1), oklch(0.2 0 1));
+  --surface-color2: light-dark(oklch(0.9 0 1), oklch(0.3 0 1));
+  --surface-color3: light-dark(oklch(0.8 0 1), oklch(0.4 0 1));
+
+  --text-on-color: light-dark(white, black);
+  --text-on-light: light-dark(black, white);
 }
