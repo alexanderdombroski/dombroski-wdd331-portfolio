@@ -7,53 +7,43 @@
 
 body {
   font-family: var(--paragraph-font);
+  font-size: var(--size-0);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:where(h1, h2, h3, h4, h5, h6) {
   font-family: var(--heading-font);
 }
 
 /* Font Sizes Large -> Small */
 
-h1 {
+:where(h1) {
   font-size: var(--size-5);
 }
 
-h2 {
+:where(h2) {
   font-size: var(--size-3);
 }
 
-h3 {
+:where(h3) {
   font-size: var(--size-2);
 }
 
-h4 {
+:where(h4) {
   font-size: var(--size-1);
 }
 
-h5,
-h6 {
+:where(h5, h6) {
   font-size: var(--size-0);
 }
 
-p,
-li,
-blockquote,
-body {
+:where(p, li, blockquote) {
   font-size: var(--size-0);
 }
 
-small,
-figcaption {
+:where(small, figcaption) {
   font-size: var(--size--1);
 }
 
-sub,
-sup {
+:where(sub, sup) {
   font-size: var(--size--2);
 }
