@@ -1,20 +1,18 @@
-body {
-  margin: 0;
-}
+/* 
+ * CSS architecture created following suggestions of 
+ * [CUBE CSS](https://cube.fyi/#what-does-cube-css-stand-for)
+ */
 
-.info-alert {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 1rem;
-  background-color: #f44336;
-  color: white;
+@layer base, layout, components, utilities;
 
-  button {
-    cursor: pointer;
-  }
+@import "base/normalize.css" layer(base);
+@import "base/variables.css" layer(base);
+@import "base/typography.css" layer(base);
+@import "base/global.css" layer(base);
 
-  .dismiss {
-    margin-left: auto;
-  }
-}
+/* @import "layout/flow.css" layer(layout); */
+/* @import "layout/grid.css" layer(layout); */
+
+@import "components/alert.css" layer(components);
+
+/* @import "utilities/utilities.css" layer(utilities); */
