@@ -1,3 +1,5 @@
+/* Font Families */
+
 :root {
   --paragraph-font: "Atkinson Hyperlegible", system-ui, Roboto, sans-serif;
   --heading-font: "Noto Sans", Georgia, Times, serif;
@@ -14,4 +16,47 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
+}
+
+/* Font Sizes Large -> Small */
+
+h1 {
+  font-size: var(--size-5);
+}
+
+h2 {
+  font-size: var(--size-4);
+}
+
+h3 {
+  font-size: var(--size-3);
+}
+
+h4 {
+  font-size: var(--size-2);
+}
+
+h5 {
+  font-size: var(--size-1);
+}
+
+h6 {
+  font-size: var(--size-1);
+}
+
+p,
+li,
+blockquote,
+body {
+  font-size: var(--size-0);
+}
+
+small,
+figcaption {
+  font-size: var(--size--1);
+}
+
+sub,
+sup {
+  font-size: var(--size--2);
 }

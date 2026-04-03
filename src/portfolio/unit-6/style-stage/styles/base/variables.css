@@ -1,0 +1,30 @@
+/* 
+ * Base fluid sizing generated via https://utopia.fyi
+ *
+ * Base sizes
+ * - width: 320px | font-size: 16px | type-scale: 1.2
+ * - width: 1024px | font-size: 20px | type-scale: 1.25
+ */
+
+:root {
+  /* Font Sizes */
+  --size--2: clamp(0.6944rem, 0.6465rem + 0.2399vw, 0.8rem);
+  --size--1: clamp(0.8333rem, 0.7576rem + 0.3788vw, 1rem);
+  --size-0: clamp(1rem, 0.8864rem + 0.5682vw, 1.25rem);
+  --size-1: clamp(1.2rem, 1.0352rem + 0.8239vw, 1.5625rem);
+  --size-2: clamp(1.44rem, 1.2068rem + 1.1662vw, 1.9531rem);
+  --size-3: clamp(1.728rem, 1.4037rem + 1.6214vw, 2.4414rem);
+  --size-4: clamp(2.0736rem, 1.629rem + 2.2231vw, 3.0518rem);
+  --size-5: clamp(2.4883rem, 1.8854rem + 3.0145vw, 3.8147rem);
+
+  /* Layout Spacing */
+  --spacing-3xs: clamp(0.25rem, 0.2216rem + 0.142vw, 0.3125rem);
+  --spacing-2xs: clamp(0.5rem, 0.4432rem + 0.2841vw, 0.625rem);
+  --spacing-xs: clamp(0.75rem, 0.6648rem + 0.4261vw, 0.9375rem);
+  --spacing-s: clamp(1rem, 0.8864rem + 0.5682vw, 1.25rem);
+  --spacing-m: clamp(1.5rem, 1.3295rem + 0.8523vw, 1.875rem);
+  --spacing-l: clamp(2rem, 1.7727rem + 1.1364vw, 2.5rem);
+  --spacing-xl: clamp(3rem, 2.6591rem + 1.7045vw, 3.75rem);
+  --spacing-2xl: clamp(4rem, 3.5455rem + 2.2727vw, 5rem);
+  --spacing-3xl: clamp(6rem, 5.3182rem + 3.4091vw, 7.5rem);
+}
