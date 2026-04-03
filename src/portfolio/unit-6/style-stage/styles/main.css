@@ -6,6 +6,7 @@
 @layer base, layout, components, utilities;
 
 @import "https://unpkg.com/@csstools/normalize.css" layer(base);
+@import "base/fonts.css" layer(base);
 @import "base/variables.css" layer(base);
 @import "base/typography.css" layer(base);
 @import "base/global.css" layer(base);
