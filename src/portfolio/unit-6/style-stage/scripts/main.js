@@ -1,3 +1,5 @@
+// The only modifications done to the HTML body are done via this script.
+
 // Add Alert
 (function () {
   const alertDiv = document.createElement("div");
@@ -28,7 +30,19 @@
       "/styles/original.css";
     alertDiv.remove(); // Can't animate with their styles
   });
-  alertDiv.querySelector(".dismiss").addEventListener("click", () => {
-    hide();
+  alertDiv.querySelector(".dismiss").addEventListener("click", hide);
+})();
+
+// Fix website links
+(function () {
+  const BASE_URL = "https://stylestage.dev";
+
+  document.querySelectorAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+
+    if (href.startsWith("/")) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("href", BASE_URL + link.getAttribute("href"));
+    }
   });
 })();
