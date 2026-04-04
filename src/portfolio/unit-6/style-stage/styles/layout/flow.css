@@ -10,10 +10,10 @@ body {
   main {
     margin-inline: auto;
     max-width: var(--max-width);
-  }
 
-  .container {
-    padding: var(--spacing-s);
+    .container {
+      padding: var(--spacing-s);
+    }
   }
 
   & > footer {

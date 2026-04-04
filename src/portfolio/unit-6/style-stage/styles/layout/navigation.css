@@ -1,0 +1,79 @@
+body > nav {
+  a {
+    display: block;
+    padding-block: var(--spacing-2xs);
+  }
+
+  @media (max-width: 48rem) {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(var(--spacing-5xl), 100%), 1fr)
+      );
+    }
+  }
+
+  @media (min-width: 48rem) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: var(--primary-color-4);
+
+    height: 100vh;
+    width: var(--spacing-m);
+    z-index: 100;
+    transition: width 0.3s ease;
+
+    &::after {
+      content: "MENU";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      color: var(--text-on-dark);
+      font-size: var(--size--1);
+      letter-spacing: 2px;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    ul {
+      margin-top: var(--spacing-3xl);
+      padding: var(--spacing-xl) var(--spacing-s);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+
+      &::before {
+        content: "Menu";
+        font-size: var(--size-3);
+      }
+
+      &::before,
+      a {
+        color: var(--text-on-dark);
+        white-space: nowrap;
+        text-decoration: none;
+
+        &:hover {
+          color: color-mix(in oklab, var(--text-on-dark) 90%, black 10%);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      width: var(--spacing-5xl);
+
+      &::after {
+        opacity: 0;
+      }
+
+      ul {
+        opacity: 1;
+      }
+    }
+  }
+}
