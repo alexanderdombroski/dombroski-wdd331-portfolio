@@ -14,7 +14,6 @@
 @import "layout/flow.css" layer(layout);
 @import "layout/navigation.css" layer(layout);
 @import "layout/aside.css" layer(layout);
-/* @import "layout/grid.css" layer(layout); */
 
 @import "components/alert.css" layer(components);
 @import "components/header.css" layer(components);

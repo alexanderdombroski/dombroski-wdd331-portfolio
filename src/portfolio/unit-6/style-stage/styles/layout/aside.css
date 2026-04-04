@@ -18,7 +18,6 @@ body > aside {
 
     h2,
     h4 {
-      margin-top: var(--spacing-3xl);
       font-size: var(--size-2);
     }
 

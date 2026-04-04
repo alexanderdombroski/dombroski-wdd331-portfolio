@@ -9,8 +9,8 @@
     `
     <span>
       The body HTML of this page was not modified, but new styles were added!
-      <button class="revert">Revert to original</button>
     </span>
+    <button class="revert">Revert to original</button>
     <button class="dismiss">x</button>
   `,
   );
