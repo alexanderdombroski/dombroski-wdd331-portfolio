@@ -1,0 +1,15 @@
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: var(--spacing-3xl);
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    hsl(from var(--surface-color) h s l / 0.5) 100%
+  );
+
+  pointer-events: none;
+}
