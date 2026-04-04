@@ -3,8 +3,8 @@
   box-sizing: border-box;
   width: 100%;
   padding: 1rem;
-  background-color: #f44336;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-on-color);
 
   button {
     cursor: pointer;

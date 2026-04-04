@@ -8,6 +8,7 @@
 body {
   font-family: var(--paragraph-font);
   font-size: var(--size-0);
+  color: var(--text-on-white);
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
@@ -46,4 +47,8 @@ body {
 
 :where(sub, sup) {
   font-size: var(--size--2);
+}
+
+:where(a:link, a:visited) {
+  color: var(--color-on-white);
 }

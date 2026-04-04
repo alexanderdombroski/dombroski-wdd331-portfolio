@@ -15,5 +15,6 @@
 /* @import "layout/grid.css" layer(layout); */
 
 @import "components/alert.css" layer(components);
+@import "components/header.css" layer(components);
 
 /* @import "utilities/utilities.css" layer(utilities); */

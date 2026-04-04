@@ -1,0 +1,30 @@
+.skip-link {
+  position: fixed;
+  background-color: var(--primary-color-4);
+  color: var(--text-on-color);
+  height: 0;
+  width: 0;
+  top: var(--spacing-m);
+  left: var(--spacing-m);
+  overflow: hidden;
+
+  &:focus {
+    width: auto;
+    height: auto;
+    padding: var(--spacing-2xs);
+  }
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: var(--spacing-l);
+  color: var(--text-on-color);
+
+  h1 {
+    margin: 0 auto;
+  }
+
+  & svg {
+    width: var(--size-1);
+  }
+}
