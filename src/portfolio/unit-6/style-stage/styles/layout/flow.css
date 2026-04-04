@@ -3,9 +3,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
 
+  .info-alert {
+    z-index: 200;
+  }
+
   main {
     margin-inline: auto;
     max-width: var(--max-width);
+  }
+
+  .container {
+    padding: var(--spacing-s);
   }
 
   & > footer {

@@ -12,12 +12,12 @@
 @import "base/global.css" layer(base);
 
 @import "layout/flow.css" layer(layout);
+@import "layout/aside.css" layer(layout);
 /* @import "layout/grid.css" layer(layout); */
 
 @import "components/alert.css" layer(components);
 @import "components/header.css" layer(components);
 @import "components/footer.css" layer(components);
-/* TODO - Add navigation like https://stylestage.dev/styles/pastels-and-columns/ */
 
 @import "effects/progress-bar.css" layer(effects);
 @import "effects/haze.css" layer(effects);
