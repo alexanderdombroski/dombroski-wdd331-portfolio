@@ -17,14 +17,18 @@
   // Insert at top of body
   document.body.prepend(alertDiv);
 
+  const hide = () => {
+    alertDiv.classList.add("hidden");
+  };
+
   alertDiv.querySelector(".revert").addEventListener("click", () => {
     const styleSheet = document.querySelector('head link[rel="stylesheet"]');
     styleSheet.href =
       window.location.href.substring(0, window.location.href.lastIndexOf("/")) +
       "/styles/original.css";
-    alertDiv.remove();
+    alertDiv.remove(); // Can't animate with their styles
   });
   alertDiv.querySelector(".dismiss").addEventListener("click", () => {
-    alertDiv.remove();
+    hide();
   });
 })();

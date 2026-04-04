@@ -1,7 +1,7 @@
 .skip-link {
   position: fixed;
   background-color: var(--primary-color-4);
-  color: var(--text-on-color);
+  color: var(--text-on-light);
   height: 0;
   width: 0;
   top: var(--spacing-m);
@@ -18,13 +18,29 @@
 header {
   background-color: var(--primary-color);
   padding: var(--spacing-l);
-  color: var(--text-on-color);
+  color: var(--text-on-light);
 
   h1 {
     margin: 0 auto;
   }
+}
 
-  & svg {
+.link-github {
+  display: flex;
+  align-content: center;
+  gap: var(--spacing-3xs);
+
+  svg {
+    --fill-color: var(--github-star-color);
+    fill: var(--fill-color);
+    stroke: var(--text-on-light);
+    stroke-width: 0.125rem;
     width: var(--size-1);
+  }
+
+  &:hover svg {
+    /* Increase the saturation */
+    --fill-color: hsl(from var(--github-star-color) h calc(s * 1.5) l);
+    stroke: var(--fill-color);
   }
 }

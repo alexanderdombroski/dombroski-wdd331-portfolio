@@ -2,9 +2,11 @@
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  padding: 1rem;
-  background-color: var(--primary-color);
+  padding: var(--spacing-s);
+  background-color: var(--accent-color);
+  border-bottom: black solid 0.125rem;
   color: var(--text-on-color);
+  max-height: var(--spacing-3xl);
 
   button {
     cursor: pointer;

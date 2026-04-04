@@ -1,9 +1,5 @@
 body > footer {
   background-color: var(--primary-color);
   padding: var(--spacing-l);
-  color: var(--text-on-color);
-
-  & svg {
-    width: var(--size-1);
-  }
+  color: var(--text-on-light);
 }

@@ -1,3 +1,16 @@
 body {
   margin: 0;
+  background-color: var(--surface-color);
+}
+
+a {
+  text-underline-offset: 0.2em;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+
+  &:active {
+    color: color-mix(in oklab, var(--accent-color) 90%, white 10%);
+  }
 }

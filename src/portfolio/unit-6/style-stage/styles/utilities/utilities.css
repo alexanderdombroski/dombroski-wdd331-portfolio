@@ -1,0 +1,12 @@
+.hidden {
+  padding-block: 0;
+  max-height: 0;
+  border: none;
+  overflow: hidden;
+  transition: max-height ease-in-out 0.4s;
+  transition: padding ease-in-out 0.4s;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: 0.05s;
+  }
+}
