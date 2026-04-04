@@ -28,6 +28,8 @@
   --spacing-2xl: clamp(4rem, 3.5455rem + 2.2727vw, 5rem);
   --spacing-3xl: clamp(6rem, 5.3182rem + 3.4091vw, 7.5rem);
 
+  --max-width: 64rem;
+
   /* Colors */
   color-scheme: light dark;
   --primary-color: light-dark(oklch(0.75 0.08 250), oklch(0.65 0.19 250));

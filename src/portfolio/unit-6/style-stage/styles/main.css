@@ -11,7 +11,7 @@
 @import "base/typography.css" layer(base);
 @import "base/global.css" layer(base);
 
-/* @import "layout/flow.css" layer(layout); */
+@import "layout/flow.css" layer(layout);
 /* @import "layout/grid.css" layer(layout); */
 
 @import "components/alert.css" layer(components);
