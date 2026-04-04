@@ -1,7 +1,6 @@
 // The only modifications done to the HTML body are done via this script.
 
-// Add Alert
-(function () {
+(function addAlert() {
   const alertDiv = document.createElement("div");
   alertDiv.className = "info-alert";
 
@@ -10,7 +9,7 @@
     `
     <span>
       The body HTML of this page was not modified, but new styles were added!
-      <button class="revert">Revert CSS to original</button>
+      <button class="revert">Revert to original</button>
     </span>
     <button class="dismiss">x</button>
   `,
@@ -33,8 +32,7 @@
   alertDiv.querySelector(".dismiss").addEventListener("click", hide);
 })();
 
-// Fix website links
-(function () {
+(function fixWebsiteLinks() {
   const BASE_URL = "https://stylestage.dev";
 
   document.querySelectorAll("a[href]").forEach((link) => {
@@ -45,4 +43,27 @@
       link.setAttribute("href", BASE_URL + link.getAttribute("href"));
     }
   });
+})();
+
+(function addAuthorInfo() {
+  const profile = document.querySelector(".profile");
+  profile.querySelector(".profile-title span:nth-of-type(2)").textContent =
+    "Style Stage";
+  profile.querySelector(".profile-author span:nth-of-type(2)").textContent =
+    "Alex Dombroski";
+  profile.querySelector(".profile-twitter span:nth-of-type(1)").textContent =
+    "LinkedIn:";
+  const social = profile.querySelector(".profile-twitter a");
+  social.textContent = "Alex Dombroski";
+  social.href = "https://www.linkedin.com/in/alexander-dombroski/";
+  social.target = "_blank";
+  const website = profile.querySelector(".profile-website a");
+  website.textContent = "alexdombroski.com";
+  website.href = "https://alexdombroski.com";
+  website.target = "_blank";
+  profile.querySelector(".profile-title span:nth-of-type(2)").textContent =
+    "Style Stage";
+  const stylesLink = profile.querySelector(".container > a");
+  stylesLink.href = "./styles/main.css";
+  stylesLink.target = "_blank";
 })();
