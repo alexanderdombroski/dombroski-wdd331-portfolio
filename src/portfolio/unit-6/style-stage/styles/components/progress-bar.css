@@ -1,0 +1,28 @@
+@keyframes grow-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+header::before {
+  content: " "; /* Placeholder needed to make the pseudo element exist */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: linear-gradient(
+    to right,
+    var(--accent-color),
+    hsl(from var(--accent-color) calc(h + 20) s l)
+  );
+  z-index: 200;
+
+  transform-origin: left;
+  animation-name: grow-progress;
+  animation-timeline: scroll(root block);
+  animation-fill-mode: both;
+}

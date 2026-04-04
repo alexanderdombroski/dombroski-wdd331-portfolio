@@ -8,7 +8,7 @@
 body {
   font-family: var(--paragraph-font);
   font-size: var(--size-0);
-  color: var(--text-on-white);
+  color: var(--text-on-light);
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
