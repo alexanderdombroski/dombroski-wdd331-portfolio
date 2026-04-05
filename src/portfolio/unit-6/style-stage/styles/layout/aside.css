@@ -53,6 +53,9 @@ body > aside {
       content: "FEATURED";
     }
   }
+  @supports (corner-shape: squircle) {
+    corner-shape: squircle;
+  }
 
   &:hover,
   &:focus-within {
@@ -64,6 +67,13 @@ body > aside {
 
     .container {
       opacity: 1;
+    }
+
+    &:nth-of-type(1) {
+      border-bottom-left-radius: var(--size-3);
+    }
+    &:nth-of-type(2) {
+      border-top-left-radius: var(--size-3);
     }
   }
 }
