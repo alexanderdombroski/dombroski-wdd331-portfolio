@@ -2,7 +2,7 @@
   ul {
     li {
       display: inline-block;
-      margin: var(--spacing-s);
+      margin: var(--spacing-2xs);
       padding: var(--spacing-2xs);
       color: var(--text-on-dark);
       border-radius: 1rem;
@@ -26,4 +26,40 @@
 }
 
 #contribute {
+  #files {
+    text-align: center;
+
+    .container {
+      box-sizing: border-box;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      margin-block: var(--spacing-xs);
+      padding: var(--spacing-s);
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--text-on-dark);
+      background-color: var(--accent-color);
+      transition: transform 0.2s ease;
+      border-radius: 4rem;
+      @supports (corner-shape: squircle) {
+        corner-shape: squircle;
+      }
+
+      @media (min-width: 32rem) {
+        width: auto;
+        display: inline-block;
+        margin-inline: var(--spacing-xs);
+      }
+
+      &:hover,
+      &:focus-visible {
+        transform: translateY(-3px);
+        outline: 3px solid hsl(from var(--accent-color) calc(h + 30) s l);
+        outline-offset: 3px;
+      }
+    }
+  }
 }
