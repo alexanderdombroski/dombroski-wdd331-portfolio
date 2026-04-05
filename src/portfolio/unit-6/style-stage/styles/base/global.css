@@ -5,6 +5,7 @@ body {
 
 a {
   text-underline-offset: 0.2em;
+  transition: color 0.2s ease-out;
 
   &:hover {
     color: var(--accent-color);

@@ -1,36 +1,63 @@
-#about {
-  ul {
-    li {
-      display: inline-block;
-      margin: var(--spacing-2xs);
-      padding: var(--spacing-2xs);
-      color: var(--text-on-dark);
-      border-radius: 1rem;
-      background: linear-gradient(
-        to bottom right,
-        var(--accent-color),
-        hsl(from var(--accent-color) calc(h + 20) s l)
-      );
+/* Open Source SVG's from [Eva Icons](https://akveo.github.io/eva-icons) */
+/* [SVG encoder](https://yoksel.github.io/url-encoder/) */
 
-      box-shadow: 0 0 6px
-        color-mix(in oklab, var(--accent-color) 90%, black 10%);
+main {
+  h2::before {
+    margin-right: var(--spacing-2xs);
+    display: inline-block;
+    content: "";
+    width: var(--size-2);
+    height: var(--size-2);
+  }
 
-      @supports (corner-shape: bevel) {
-        corner-shape: bevel squircle;
+  #about {
+    .container:nth-of-type(1) h2::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='mic'%3E%3Crect width='24' height='24' opacity='0'/%3E%3Cpath d='M12 15a4 4 0 0 0 4-4V6a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4zm-2-9a2 2 0 0 1 4 0v5a2 2 0 0 1-4 0z'/%3E%3Cpath d='M19 11a1 1 0 0 0-2 0 5 5 0 0 1-10 0 1 1 0 0 0-2 0 7 7 0 0 0 6 6.92V20H8.89a.89.89 0 0 0-.89.89v.22a.89.89 0 0 0 .89.89h6.22a.89.89 0 0 0 .89-.89v-.22a.89.89 0 0 0-.89-.89H13v-2.08A7 7 0 0 0 19 11z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .container:nth-of-type(2) h2::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='bulb'%3E%3Crect width='24' height='24' transform='rotate(180 12 12)' opacity='0'/%3E%3Cpath d='M12 7a5 5 0 0 0-3 9v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a5 5 0 0 0-3-9zm1.5 7.59a1 1 0 0 0-.5.87V20h-2v-4.54a1 1 0 0 0-.5-.87A3 3 0 0 1 9 12a3 3 0 0 1 6 0 3 3 0 0 1-1.5 2.59z'/%3E%3Cpath d='M12 6a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1z'/%3E%3Cpath d='M21 11h-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2z'/%3E%3Cpath d='M5 11H3a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2z'/%3E%3Cpath d='M7.66 6.42L6.22 5a1 1 0 0 0-1.39 1.47l1.44 1.39a1 1 0 0 0 .73.28 1 1 0 0 0 .72-.31 1 1 0 0 0-.06-1.41z'/%3E%3Cpath d='M19.19 5.05a1 1 0 0 0-1.41 0l-1.44 1.37a1 1 0 0 0 0 1.41 1 1 0 0 0 .72.31 1 1 0 0 0 .69-.28l1.44-1.39a1 1 0 0 0 0-1.42z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        margin: var(--spacing-2xs);
+        padding: var(--spacing-2xs);
+        color: var(--text-on-dark);
+        border-radius: 1rem;
+        background: linear-gradient(
+          to bottom right,
+          var(--accent-color),
+          hsl(from var(--accent-color) calc(h + 20) s l)
+        );
+
+        box-shadow: 0 0 6px
+          color-mix(in oklab, var(--accent-color) 90%, black 10%);
+
+        @supports (corner-shape: bevel) {
+          corner-shape: bevel squircle;
+        }
       }
     }
   }
-}
 
-#guidelines {
-}
+  #guidelines {
+    h2::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='briefcase'%3E%3Crect width='24' height='24' opacity='0'/%3E%3Cpath d='M19 7h-3V5.5A2.5 2.5 0 0 0 13.5 3h-3A2.5 2.5 0 0 0 8 5.5V7H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3zm-4 2v10H9V9zm-5-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V7h-4zM4 18v-8a1 1 0 0 1 1-1h2v10H5a1 1 0 0 1-1-1zm16 0a1 1 0 0 1-1 1h-2V9h2a1 1 0 0 1 1 1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
 
-#contribute {
-  #files {
-    text-align: center;
+  #contribute {
+    h2::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='code-download'%3E%3Crect width='24' height='24' transform='rotate(90 12 12)' opacity='0'/%3E%3Cpath d='M4.29 12l4.48-5.36a1 1 0 1 0-1.54-1.28l-5 6a1 1 0 0 0 0 1.27l4.83 6a1 1 0 0 0 .78.37 1 1 0 0 0 .78-1.63z'/%3E%3Cpath d='M21.78 11.37l-4.78-6a1 1 0 0 0-1.56 1.26L19.71 12l-4.48 5.37a1 1 0 0 0 .13 1.41A1 1 0 0 0 16 19a1 1 0 0 0 .77-.36l5-6a1 1 0 0 0 .01-1.27z'/%3E%3Cpath d='M15.72 11.41a1 1 0 0 0-1.41 0L13 12.64V8a1 1 0 0 0-2 0v4.59l-1.29-1.3a1 1 0 0 0-1.42 1.42l3 3A1 1 0 0 0 12 16a1 1 0 0 0 .69-.28l3-2.9a1 1 0 0 0 .03-1.41z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
 
-    .container {
-      box-sizing: border-box;
+    #files {
+      text-align: center;
+
+      .container {
+        box-sizing: border-box;
+      }
     }
   }
 }
