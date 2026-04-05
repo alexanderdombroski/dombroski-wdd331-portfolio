@@ -19,15 +19,45 @@ header {
   background-color: var(--primary-color);
   padding: var(--spacing-l);
   color: var(--text-on-light);
+  text-align: center;
 
   h1 {
     margin: 0 auto;
+    display: inline-block;
+    padding: var(--spacing-l);
+    font-size: var(--size-5);
+
+    --logo-gradient-1: linear-gradient(
+      to top right,
+      hsl(from var(--accent-color) calc(h + 20) calc(s + 50) l),
+      var(--accent-color)
+    );
+    --logo-gradient-2: linear-gradient(
+      to top right,
+      var(--accent-color),
+      hsl(from var(--accent-color) calc(h - 20) calc(s + 50) l)
+    );
+
+    background: var(--logo-gradient-1), var(--logo-gradient-2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    border-style: solid;
+    border-width: 0.5rem;
+    border-image-source: var(--logo-gradient-1);
+    border-image-slice: 1;
+
+    box-shadow: 10px -10px 1px
+      color-mix(in oklab, var(--accent-color) 80%, black 20%);
   }
 }
 
 .link-github {
   display: flex;
   align-content: center;
+  justify-content: center;
+  margin-inline: auto;
   gap: var(--spacing-3xs);
 
   svg {
@@ -36,6 +66,9 @@ header {
     stroke: var(--text-on-light);
     stroke-width: 0.125rem;
     width: var(--size-1);
+    transition:
+      fill 0.1s ease-in,
+      stroke 0.1s ease-in;
   }
 
   &:hover svg {
