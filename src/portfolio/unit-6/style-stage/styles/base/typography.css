@@ -39,6 +39,7 @@ body {
 
 :where(p, li, blockquote) {
   font-size: var(--size-0);
+  line-height: var(--size-2);
 }
 
 :where(small, figcaption) {

@@ -4,10 +4,22 @@
   color: var(--text-on-light);
 
   .container {
+    display: grid;
+    grid-template-areas:
+      "text text"
+      "links links"
+      "copyright tooling";
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--spacing-2xl);
     max-width: var(--max-width);
     margin-inline: auto;
 
+    p:first-of-type {
+      grid-area: text;
+    }
+
     ul {
+      grid-area: links;
       display: flex;
       flex-wrap: wrap;
       gap: var(--spacing-s);
@@ -15,6 +27,14 @@
       a {
         font-weight: 500;
       }
+    }
+
+    p:nth-of-type(-2) {
+      grid-area: copyright;
+    }
+
+    p:last-of-type {
+      grid-area: tooling;
     }
   }
 }

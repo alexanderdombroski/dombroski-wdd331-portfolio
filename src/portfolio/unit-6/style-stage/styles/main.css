@@ -25,9 +25,3 @@
 @import "effects/haze.css" layer(effects);
 
 @import "utilities/utilities.css" layer(utilities);
-
-/*
-TODO
-At least one of: container queries, grid-template-areas, or subgrid (where supported, with sensible fallback).
-At least two of: transforms, layered gradients, blend modes, or filters—used in service of the design, not as random decoration.
-*/
