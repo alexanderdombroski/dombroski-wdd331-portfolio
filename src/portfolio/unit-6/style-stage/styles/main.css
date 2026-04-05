@@ -17,6 +17,7 @@
 
 @import "components/alert.css" layer(components);
 @import "components/header.css" layer(components);
+@import "components/articles.css" layer(components);
 @import "components/footer.css" layer(components);
 
 @import "effects/progress-bar.css" layer(effects);

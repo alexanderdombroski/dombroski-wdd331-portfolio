@@ -1,0 +1,29 @@
+#about {
+  ul {
+    li {
+      display: inline-block;
+      margin: var(--spacing-s);
+      padding: var(--spacing-2xs);
+      color: var(--text-on-dark);
+      border-radius: 1rem;
+      background: linear-gradient(
+        to bottom right,
+        var(--accent-color),
+        hsl(from var(--accent-color) calc(h + 20) s l)
+      );
+
+      box-shadow: 0 0 6px
+        color-mix(in oklab, var(--accent-color) 90%, black 10%);
+
+      @supports (corner-shape: bevel) {
+        corner-shape: bevel squircle;
+      }
+    }
+  }
+}
+
+#guidelines {
+}
+
+#contribute {
+}
