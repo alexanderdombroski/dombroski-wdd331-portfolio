@@ -6,11 +6,16 @@ body > nav {
 
   @media (max-width: 48rem) {
     ul {
+      margin-left: var(--spacing-xl);
+      margin-right: var(--spacing-2xl);
       display: grid;
       grid-template-columns: repeat(
         auto-fit,
         minmax(min(var(--spacing-5xl), 100%), 1fr)
       );
+      li {
+        text-align: center;
+      }
     }
   }
 
