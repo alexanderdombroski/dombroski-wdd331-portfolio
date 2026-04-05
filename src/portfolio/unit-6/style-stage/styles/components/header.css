@@ -51,6 +51,34 @@ header {
     box-shadow: 10px -10px 1px
       color-mix(in oklab, var(--accent-color) 80%, black 20%);
   }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    align-items: center;
+    margin-inline: auto;
+    flex-shrink: 1;
+  }
+
+  h2::before,
+  h2::after {
+    margin-inline: var(--spacing-2xs);
+    display: inline-block;
+    content: "";
+    width: var(--spacing-2xl);
+    height: var(--spacing-2xl);
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+
+  h2::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='color-palette'%3E%3Crect width='24' height='24' opacity='0'/%3E%3Cpath d='M19.54 5.08A10.61 10.61 0 0 0 11.91 2a10 10 0 0 0-.05 20 2.58 2.58 0 0 0 2.53-1.89 2.52 2.52 0 0 0-.57-2.28.5.5 0 0 1 .37-.83h1.65A6.15 6.15 0 0 0 22 11.33a8.48 8.48 0 0 0-2.46-6.25zM15.88 15h-1.65a2.49 2.49 0 0 0-1.87 4.15.49.49 0 0 1 .12.49c-.05.21-.28.34-.59.36a8 8 0 0 1-7.82-9.11A8.1 8.1 0 0 1 11.92 4H12a8.47 8.47 0 0 1 6.1 2.48 6.5 6.5 0 0 1 1.9 4.77A4.17 4.17 0 0 1 15.88 15z'/%3E%3Ccircle cx='12' cy='6.5' r='1.5'/%3E%3Cpath d='M15.25 7.2a1.5 1.5 0 1 0 2.05.55 1.5 1.5 0 0 0-2.05-.55z'/%3E%3Cpath d='M8.75 7.2a1.5 1.5 0 1 0 .55 2.05 1.5 1.5 0 0 0-.55-2.05z'/%3E%3Cpath d='M6.16 11.26a1.5 1.5 0 1 0 2.08.4 1.49 1.49 0 0 0-2.08-.4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  h2::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='color-picker'%3E%3Crect width='24' height='24' opacity='0'/%3E%3Cpath d='M19.4 7.34L16.66 4.6A1.92 1.92 0 0 0 14 4.53l-2 2-1.29-1.24a1 1 0 0 0-1.42 1.42L10.53 8 5 13.53a2 2 0 0 0-.57 1.21L4 18.91a1 1 0 0 0 .29.8A1 1 0 0 0 5 20h.09l4.17-.38a2 2 0 0 0 1.21-.57l5.58-5.58 1.24 1.24a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42l-1.24-1.24 2-2a1.92 1.92 0 0 0-.07-2.71zM9.08 17.62l-3 .28.27-3L12 9.36l2.69 2.7zm7-7L13.36 8l1.91-2L18 8.73z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
 }
 
 .link-github {
