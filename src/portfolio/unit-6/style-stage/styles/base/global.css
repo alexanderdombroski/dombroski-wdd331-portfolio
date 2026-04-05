@@ -14,6 +14,10 @@ a {
   &:active {
     color: color-mix(in oklab, var(--accent-color) 90%, white 10%);
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 ul {
