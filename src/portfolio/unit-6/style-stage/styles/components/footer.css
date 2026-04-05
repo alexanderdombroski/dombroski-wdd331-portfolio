@@ -1,5 +1,20 @@
-body > footer {
+.page-footer {
   background-color: var(--primary-color);
   padding: var(--spacing-l);
   color: var(--text-on-light);
+
+  .container {
+    max-width: var(--max-width);
+    margin-inline: auto;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-s);
+
+      a {
+        font-weight: 500;
+      }
+    }
+  }
 }

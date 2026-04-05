@@ -10,3 +10,7 @@
     transition-duration: 0.05s;
   }
 }
+
+strong {
+  color: var(--accent-color);
+}
