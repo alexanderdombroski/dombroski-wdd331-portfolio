@@ -3,7 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visual Effects</title>
+    <title>Alma 5 — Self Assessment</title>
+    <meta
+      name="description"
+      content="A self-assessment based on the questions of Alma chapter 5. Check off each question and watch the image of Christ become clear."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./scripts/main.js" type="module" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Alma 5 — Self Assessment</h1>
+      <p>"Have ye received his image in your countenances?"</p>
+    </header>
+
+    <div class="container">
+      <div class="image-col">
+        <div class="image-wrap">
+          <img id="christImg" src="./assets/christ.jpeg" alt="Jesus Christ" />
+          <div class="image-overlay" id="overlay">
+            <span id="percentText">0% Clear</span>
+          </div>
+        </div>
+        <p id="progressText"></p>
+      </div>
+
+      <div class="questions-col" id="questionsList"></div>
+    </div>
+  </body>
 </html>
